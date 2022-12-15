@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số ngày</title>
+</head>
+<body>
+<input type="thang" id="thang" >
+<button onclick="tinhsongay()">Tính Số Ngày</button>
+<p type="text" id="trave"></p>
+<script>
+function tinhsongay() {
+    let thang= +document.getElementById('thang').value;
+    switch (thang) {
+        case 1:
+            document.getElementById('trave').innerHTML="Tháng 1 có 31 ngày"
+            break;
+        case 2:
+                document.getElementById('trave').innerHTML="Tháng 2 có 28 hoặc 29 ngày"
+            break;
+        case 3:
+            document.getElementById('trave').innerText="Tháng 3 có 31 ngày"
+            break;
+        case 4:
+            document.getElementById('trave').innerText="Tháng 4 có 30 ngày"
+            break;
+        case 5:
+            document.getElementById('trave').innerHTML="Tháng 5 có 31 ngày"
+            break;
+        case 6:
+            document.getElementById('trave').innerText="Tháng 6 có 30 ngày"
+            break;
+        case 7:
+            document.getElementById('trave').innerText="Tháng 7 có 31 ngày"
+            break;
+        case 8:
+            document.getElementById('trave').innerHTML="Tháng 8 có 31 ngày"
+            break;
+        case 9:
+            document.getElementById('trave').innerHTML="Tháng 9 có 30 ngày"
+            break;
+        case 10:
+            document.getElementById('trave').innerText="Tháng 10 có 31 ngày"
+            break;
+        case 11:
+            document.getElementById('trave').innerText="Tháng 11 có 30 ngày"
+            break;
+        case 12:
+            document.getElementById('trave').innerHTML="Tháng 12 có 31 ngày"
+            break;
+        default:
+            document.getElementById('trave').innerHTML="Không có giá trị"
+    }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Phân loại chỉ số BMI</h1>
+<lable>
+    Chiều cao <input type="number" id="m" value="chieucao">cm
+</lable>
+<br>
+<lable>
+    Cân nặng <input type="number" id="kg" value="cannang">kg
+</lable>
+<br>
+<lable>
+    BMI <input type="number" id="bmi">
+</lable>
+<p id="ketQua">Kết quả:</p>
+<button onclick="submit()">Submit</button>
+<script>
+    function submit() {
+        let chieucao = +document.getElementById('m').value;
+        let cannang = +document.getElementById('kg').value;
+        let bmi = (cannang) / (chieucao * chieucao);
+        document.getElementById('bmi').value= bmi
+        if (bmi < 18)
+            document.getElementById('ketQua').innerHTML="Bạn là người gầy"
+        else if (bmi < 25.0)
+            document.getElementById('ketQua').innerHTML="Bạn là người bình thường"
+        else if (bmi < 30.0)
+            document.getElementById('ketQua').innerHTML="Bạn là người tiền béo phì"
+        else
+            document.getElementById('ketQua').innerHTML='Bạn là người béo phì'
+    }
+</script>
+</funciton>
+</body>
+</html>
